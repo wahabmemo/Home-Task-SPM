@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #22254b;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 200px #22254B;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 40px #6c71af;
+  border-radius: 50px;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+header {
+    background-color: #373b69;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid #6c71af;
+    border-radius: 50px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.search::placeholder {
+    color: #7378c5;
+}
+
+.search:focus {
+    background-color: #22254b;
+    outline: none;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    background-color: #373b69;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+    width: 300px;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin: 0;
+}
+
+.movie-info span {
+    background-color: #22254b;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+}
+.movie-info span.green {
+    color: rgb(39, 189, 39);
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: rgb(189, 42, 42);
+}
+
+.overview {
+    background-color: #fff;
+    padding: 2rem;
+    position: absolute;
+    max-height: 70%;
+    overflow-y: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+.overview::-webkit-scrollbar{
+    width: 8px !important;
+}
+
+.overview::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 40px #2c2929;
+    border-radius: 100px;
+}
+
+.overview::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 200px #a5a4a4;
+}
+.overview h3 {
+    margin-top: 0;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+footer {
+    bottom: 0;
+    background-color: #373b69;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
